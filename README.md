@@ -1,0 +1,2 @@
+# joseo
+Portfolio SEO

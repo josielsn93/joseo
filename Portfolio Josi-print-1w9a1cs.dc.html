@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style data-omelette-print-defaults>
+@media print {
+  @page { margin: 0.5in; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid; }
+  figure, table, pre, blockquote, img, svg, tr, [class~="card" i] { break-inside: avoid; }
+  img, svg { max-width: 100%; }
+  p { orphans: 3; widows: 3; }
+}
+</style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;padding:0;background:#06090f;}
+a{color:#3fe0a0;text-decoration:none;}
+a:hover{color:#7dedc0;text-decoration:underline;}
+doc-page:not(:defined){visibility:hidden;}
+</style>
+</helmet>
+<x-import component-from-global-scope="doc-page" from="./doc-page.js" size="a4" orientation="portrait" margin="0" hint-size="100%,100%">
+
+<!-- ============ PÁGINA 1 · CAPA ============ -->
+<section data-screen-label="Capa" style="height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:18mm 16mm 14mm;display:flex;flex-direction:column;overflow:hidden;position:relative;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(#2b324033 1px,transparent 1px),linear-gradient(90deg,#2b324033 1px,transparent 1px);background-size:24px 24px;pointer-events:none;"></div>
+  <div style="position:relative;display:flex;justify-content:space-between;align-items:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.14em;color:#8b949e;">
+    <div>PORTFÓLIO DE PROJETOS</div>
+    <div>SEO &amp; AUTOMAÇÃO — 2026</div>
+  </div>
+  <div style="position:relative;flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px;">
+    <sc-if value="{{ mostrarFoto }}" hint-placeholder-val="{{ true }}">
+      <div style="width:132px;height:132px;border-radius:50%;padding:4px;background:linear-gradient(135deg,#3fe0a0,#1a7a55);">
+        <img src="uploads/foto-1784226479419.JPG" alt="Foto de Josi" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">
+      </div>
+    </sc-if>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:12px;">&gt;_ {{ nomeExibido }}</div>
+      <h1 style="margin:0;font-size:64px;line-height:1.02;font-weight:700;letter-spacing:-0.02em;">SEO Técnico<br>&amp; Automação</h1>
+      <p style="margin:20px 0 0;font-size:19px;line-height:1.5;color:#b6c0cc;max-width:520px;text-wrap:pretty;">SEO estruturado com automação real — não só recomendação, mas sistema que roda sozinho.</p>
+    </div>
+  </div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:22px;">
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px 14px;">
+      <div style="font-size:26px;font-weight:700;color:#3fe0a0;">#30 → Top 5</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:6px;letter-spacing:0.06em;">SALTO DE POSIÇÃO EM SERP</div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px 14px;">
+      <div style="font-size:26px;font-weight:700;color:#3fe0a0;">~540h</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:6px;letter-spacing:0.06em;">ECONOMIZADAS COM AUTOMAÇÃO</div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px 14px;">
+      <div style="font-size:26px;font-weight:700;color:#3fe0a0;">30–40</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:6px;letter-spacing:0.06em;">POSTS PUBLICADOS / MÊS</div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px 14px;">
+      <div style="font-size:26px;font-weight:700;color:#3fe0a0;">80+</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:6px;letter-spacing:0.06em;">TERMOS DE GLOSSÁRIO INTERLIGADOS</div>
+    </div>
+  </div>
+  <div style="position:relative;border-top:1px solid #2b3240;padding-top:14px;display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#b6c0cc;">
+    <div><span style="color:#3fe0a0;">✉</span> jsilverionascimento@gmail.com</div>
+    <div><span style="color:#3fe0a0;">in/</span> josielsilverio-ai-automation</div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 2 · SOBRE + PROCESSO ============ -->
+<section data-screen-label="Sobre e Processo" style="break-before:page;height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:16mm;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8b949e;margin-bottom:26px;">
+    <div>{{ nomeExibido }} — SEO TÉCNICO &amp; AUTOMAÇÃO</div><div>02 / 06</div>
+  </div>
+  <h2 style="margin:0 0 16px;font-size:34px;font-weight:700;letter-spacing:-0.01em;">Quem constrói o sistema<br><span style="color:#3fe0a0;">que analisa os dados.</span></h2>
+  <p style="margin:0 0 26px;font-size:15px;line-height:1.65;color:#b6c0cc;max-width:600px;text-wrap:pretty;">Construí operações de SEO do zero em empresas de iGaming, unindo fundamentos técnicos — auditoria, GA4/GSC, arquitetura de conteúdo, gestão de CMS — a automações próprias em n8n e integrações com APIs de IA. O resultado: menos trabalho manual repetitivo e processos que continuam gerando valor depois que o projeto termina.</p>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px;">
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:18px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:12px;">FERRAMENTAS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">GA4 / Search Console</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Semrush / Ahrefs</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">WordPress / Elementor</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">n8n</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">APIs de IA</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Microsoft Clarity</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Excel / Sheets</span>
+      </div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:18px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:12px;">SETORES</div>
+      <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;color:#d3dae3;">
+        <div style="display:flex;gap:10px;align-items:baseline;"><span style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">›</span> iGaming — nichos de altíssima disputa</div>
+        <div style="display:flex;gap:10px;align-items:baseline;"><span style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">›</span> E-commerce</div>
+        <div style="display:flex;gap:10px;align-items:baseline;"><span style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">›</span> Conteúdo &amp; SEO</div>
+      </div>
+    </div>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:14px;">COMO EU TRABALHO — 5 ETAPAS</div>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;flex:1;align-content:start;">
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:8px;padding:14px 12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;color:#3fe0a0;margin-bottom:8px;">01</div>
+      <div style="font-size:13.5px;font-weight:600;margin-bottom:6px;">Diagnóstico</div>
+      <div style="font-size:11.5px;line-height:1.5;color:#8b949e;">Auditoria técnica, GA4/GSC e leitura de concorrência.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:8px;padding:14px 12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;color:#3fe0a0;margin-bottom:8px;">02</div>
+      <div style="font-size:13.5px;font-weight:600;margin-bottom:6px;">Estratégia</div>
+      <div style="font-size:11.5px;line-height:1.5;color:#8b949e;">Plano de SEO com arquitetura de conteúdo e interlinking.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:8px;padding:14px 12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;color:#3fe0a0;margin-bottom:8px;">03</div>
+      <div style="font-size:13.5px;font-weight:600;margin-bottom:6px;">Execução</div>
+      <div style="font-size:11.5px;line-height:1.5;color:#8b949e;">On-page, CMS e publicação com checklist de SEO.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:8px;padding:14px 12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;color:#3fe0a0;margin-bottom:8px;">04</div>
+      <div style="font-size:13.5px;font-weight:600;margin-bottom:6px;">Automação</div>
+      <div style="font-size:11.5px;line-height:1.5;color:#8b949e;">Fluxos n8n + IA substituem o trabalho repetitivo.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:8px;padding:14px 12px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:20px;color:#3fe0a0;margin-bottom:8px;">05</div>
+      <div style="font-size:13.5px;font-weight:600;margin-bottom:6px;">Monitoramento</div>
+      <div style="font-size:11.5px;line-height:1.5;color:#8b949e;">SERP e concorrência vigiados por sistema, não por planilha.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 3 · PROJETO 01 ============ -->
+<section data-screen-label="Projeto 01 — SEO Técnico" style="break-before:page;height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:16mm;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8b949e;margin-bottom:26px;">
+    <div>{{ nomeExibido }} — SEO TÉCNICO &amp; AUTOMAÇÃO</div><div>03 / 06</div>
+  </div>
+  <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.14em;">PROJETO 01 · SEO TÉCNICO</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI — iGaming</div>
+  </div>
+  <h2 style="margin:0 0 24px;font-size:32px;font-weight:700;letter-spacing:-0.01em;">Operação de SEO construída do zero</h2>
+  <div style="border:1px solid #2b3240;background:#11161f;border-radius:10px;padding:22px;margin-bottom:24px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:16px;">RESULTADO — POSIÇÃO MÉDIA EM SERP (GAMES INTERNOS)</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="display:grid;grid-template-columns:70px 1fr 90px;gap:14px;align-items:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">ANTES</div>
+        <div style="height:22px;background:#1c232e;border-radius:4px;overflow:hidden;"><div style="width:100%;height:100%;background:#2b3240;"></div></div>
+        <div style="font-size:20px;font-weight:700;color:#8b949e;">#30</div>
+      </div>
+      <div style="display:grid;grid-template-columns:70px 1fr 90px;gap:14px;align-items:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;">DEPOIS</div>
+        <div style="height:22px;background:#1c232e;border-radius:4px;overflow:hidden;"><div style="width:15%;height:100%;background:linear-gradient(90deg,#3fe0a0,#7dedc0);"></div></div>
+        <div style="font-size:20px;font-weight:700;color:#3fe0a0;">Top 5</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;font-size:12.5px;color:#8b949e;line-height:1.5;">Salto da 30ª posição para as 5 primeiras após otimização on-page das páginas de games internos.</div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">CONTEXTO</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Empresas do setor iGaming sem estrutura de SEO prévia, competindo em nichos de alta disputa por conteúdo e autoridade.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">O QUE FIZ</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Planejei e executei um plano de SEO de 6 meses: auditoria técnica, glossário com 80+ termos interligados por arquitetura de conteúdo (link building interno) e monitoramento contínuo de concorrentes.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">DIFERENCIAL</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Estrutura pensada para escalar sem depender de trabalho manual constante — o conteúdo se sustenta pela interligação e organização, não por esforço repetido.</p>
+    </div>
+  </div>
+  <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px;display:flex;gap:16px;align-items:center;">
+      <div style="font-size:30px;font-weight:700;color:#3fe0a0;">80+</div>
+      <div style="font-size:12px;color:#8b949e;line-height:1.5;">termos de glossário interligados por arquitetura de conteúdo</div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px;display:flex;gap:16px;align-items:center;">
+      <div style="font-size:30px;font-weight:700;color:#3fe0a0;">6 meses</div>
+      <div style="font-size:12px;color:#8b949e;line-height:1.5;">de plano estruturado: auditoria → arquitetura → monitoramento</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 4 · PROJETO 02 AUTOMAÇÃO ============ -->
+<section data-screen-label="Projeto 02 — Automação" style="break-before:page;height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:16mm;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8b949e;margin-bottom:26px;">
+    <div>{{ nomeExibido }} — SEO TÉCNICO &amp; AUTOMAÇÃO</div><div>04 / 06</div>
+  </div>
+  <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.14em;">PROJETO 02 · AUTOMAÇÃO</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI</div>
+  </div>
+  <h2 style="margin:0 0 24px;font-size:32px;font-weight:700;letter-spacing:-0.01em;">Conteúdo e monitoramento de SERP<br>rodando sozinhos via n8n</h2>
+  <div style="border:1px solid #2b3240;background:#11161f;border-radius:10px;padding:20px;margin-bottom:22px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:16px;">ARQUITETURA DO FLUXO</div>
+    <div style="display:flex;align-items:center;gap:8px;">
+      <div style="flex:1;border:1px solid #2b3240;border-radius:8px;padding:12px 10px;text-align:center;background:#0d1117;">
+        <div style="font-size:12.5px;font-weight:600;">Rastreamento de SERP</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;margin-top:4px;">posições + concorrência</div>
+      </div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;font-size:16px;">→</div>
+      <div style="flex:1;border:1px solid #3fe0a0;border-radius:8px;padding:12px 10px;text-align:center;background:#0d1117;">
+        <div style="font-size:12.5px;font-weight:600;color:#3fe0a0;">Fluxo n8n</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;margin-top:4px;">orquestração automática</div>
+      </div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;font-size:16px;">→</div>
+      <div style="flex:1;border:1px solid #2b3240;border-radius:8px;padding:12px 10px;text-align:center;background:#0d1117;">
+        <div style="font-size:12.5px;font-weight:600;">Análise com IA</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;margin-top:4px;">APIs de IA</div>
+      </div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;font-size:16px;">→</div>
+      <div style="flex:1;border:1px solid #2b3240;border-radius:8px;padding:12px 10px;text-align:center;background:#0d1117;">
+        <div style="font-size:12.5px;font-weight:600;">Alerta / Relatório</div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;margin-top:4px;">decisão orientada por dado</div>
+      </div>
+    </div>
+  </div>
+  <div style="border:1px solid #2b3240;background:#11161f;border-radius:10px;padding:22px;margin-bottom:22px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:16px;">RESULTADO — TEMPO DE PRODUÇÃO DE CONTEÚDO</div>
+    <div style="display:flex;flex-direction:column;gap:14px;">
+      <div style="display:grid;grid-template-columns:150px 1fr 110px;gap:14px;align-items:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">MANUAL (REDATOR)</div>
+        <div style="height:22px;background:#1c232e;border-radius:4px;overflow:hidden;"><div style="width:100%;height:100%;background:#2b3240;"></div></div>
+        <div style="font-size:18px;font-weight:700;color:#8b949e;">9h / 5 conteúdos</div>
+      </div>
+      <div style="display:grid;grid-template-columns:150px 1fr 110px;gap:14px;align-items:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;">AUTOMAÇÃO n8n</div>
+        <div style="height:22px;background:#1c232e;border-radius:4px;overflow:hidden;"><div style="width:6%;height:100%;background:linear-gradient(90deg,#3fe0a0,#7dedc0);"></div></div>
+        <div style="font-size:18px;font-weight:700;color:#3fe0a0;">~30 min</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;display:flex;gap:16px;align-items:center;border-top:1px solid #2b3240;padding-top:16px;">
+      <div style="font-size:34px;font-weight:700;color:#3fe0a0;">~540h</div>
+      <div style="font-size:12.5px;color:#8b949e;line-height:1.5;">economizadas na criação de conteúdo para 300+ jogos do site — tempo devolvido à estratégia.</div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:auto;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">CONTEXTO</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Acompanhar posições, concorrentes e produzir conteúdo em volume exigia checagem e redação manuais constantes, consumindo tempo que poderia ir para estratégia.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">O QUE FIZ</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Desenhei fluxos de automação no n8n integrados a APIs de IA para captar mudanças de SERP e concorrência automaticamente e gerar conteúdo em escala, sem depender de checagem manual diária.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">DIFERENCIAL</div>
+      <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Saí do papel de "quem analisa dados" para o de "quem constrói o sistema que analisa dados" — uma competência rara dentro de times de SEO.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 5 · PROJETOS 03 + 04 ============ -->
+<section data-screen-label="Projetos 03 e 04" style="break-before:page;height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:16mm;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8b949e;margin-bottom:26px;">
+    <div>{{ nomeExibido }} — SEO TÉCNICO &amp; AUTOMAÇÃO</div><div>05 / 06</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.14em;">PROJETO 03 · CMS / CONTEÚDO</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI — iGaming</div>
+    </div>
+    <h2 style="margin:0 0 16px;font-size:26px;font-weight:700;">Blog WordPress com abastecimento diário</h2>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:16px;">
+      <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:16px;display:flex;flex-direction:column;justify-content:center;gap:12px;">
+        <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">2 / dia</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;letter-spacing:0.06em;">POSTS PUBLICADOS</div></div>
+        <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">30–40 / mês</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;letter-spacing:0.06em;">COM CHECKLIST DE SEO ON-PAGE</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;"><span style="color:#3fe0a0;font-weight:600;">O que fiz:</span> geri o blog via WordPress com Elementor, publicando diariamente posts, imagens, atualizações de odds e notícias — cada publicação com padrão de SEO on-page (título, meta description, estrutura de headings).</p>
+        <p style="margin:0;font-size:13px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;"><span style="color:#3fe0a0;font-weight:600;">Diferencial:</span> volume alto sem perder padrão técnico — cada post seguia um checklist de SEO mesmo sob prazo editorial apertado do dia a dia.</p>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2b3240;margin:20px 0;"></div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.14em;">PROJETO 04 · GROWTH / CRO</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI</div>
+    </div>
+    <h2 style="margin:0 0 16px;font-size:26px;font-weight:700;">Landing pages para topo de funil</h2>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:16px;">
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">CONTEXTO</div>
+        <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Necessidade de captar leads no topo do funil com páginas dedicadas, testando variações de layout e copy para melhorar conversão.</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">O QUE FIZ</div>
+        <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Criei LPs responsivas no Elementor com formulário de cadastro e rodei testes A/B, variando botões, imagens e títulos. Usei Microsoft Clarity (heatmaps e gravações de sessão) para embasar cada hipótese.</p>
+      </div>
+      <div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">DIFERENCIAL</div>
+        <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Decisão de design orientada por dado real de comportamento do usuário, não só por preferência estética.</p>
+      </div>
+    </div>
+    <div style="border:1px solid #2b3240;background:#11161f;border-radius:8px;padding:14px 18px;display:flex;gap:12px;align-items:center;margin-top:auto;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;">HIPÓTESE</div><div style="color:#3fe0a0;">→</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#d3dae3;">TESTE A/B</div><div style="color:#3fe0a0;">→</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#d3dae3;">CLARITY (HEATMAP + SESSÕES)</div><div style="color:#3fe0a0;">→</div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#d3dae3;">ITERAÇÃO</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PÁGINA 6 · LLMS.TXT + COMPETÊNCIAS + CTA ============ -->
+<section data-screen-label="Projeto 05 e Contato" style="break-before:page;height:297mm;box-sizing:border-box;background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;padding:16mm;display:flex;flex-direction:column;overflow:hidden;">
+  <div style="display:flex;justify-content:space-between;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.14em;color:#8b949e;margin-bottom:26px;">
+    <div>{{ nomeExibido }} — SEO TÉCNICO &amp; AUTOMAÇÃO</div><div>06 / 06</div>
+  </div>
+  <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.14em;">PROJETO 05 · AI / LLM</div>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI — iniciativa própria</div>
+  </div>
+  <h2 style="margin:0 0 16px;font-size:26px;font-weight:700;">Implementação de llms.txt — SEO para buscadores de IA</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">CONTEXTO</div>
+      <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Buscadores de IA (ChatGPT, Perplexity, IA do Google) passaram a ser porta de entrada relevante para tráfego — e quase nenhuma empresa do setor tinha se preparado para isso.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">O QUE FIZ</div>
+      <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Fui uma das primeiras a implementar o llms.txt na empresa — arquivo que orienta como modelos de IA leem e citam o conteúdo do site, antecipando um padrão ainda pouco adotado no Brasil.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:10px;">DIFERENCIAL</div>
+      <p style="margin:0;font-size:12.5px;line-height:1.6;color:#b6c0cc;text-wrap:pretty;">Iniciativa própria, não pedida por ninguém — reflete a forma como enxergo SEO: sempre um passo à frente de onde a busca está indo.</p>
+    </div>
+  </div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:12px;">COMPETÊNCIAS CENTRAIS</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px;">
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">SEO técnico e on-page</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Arquitetura de conteúdo</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Interlinking estratégico</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">GA4 / Search Console</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Semrush / Ahrefs</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">WordPress / Elementor</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Microsoft Clarity</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Testes A/B</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Automação com n8n</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Integração com APIs de IA</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">SEO para buscadores de IA</span>
+    <span style="border:1px solid #2b3240;background:#11161f;border-radius:99px;padding:6px 14px;font-size:12px;color:#d3dae3;">Excel / Google Sheets</span>
+  </div>
+  <div style="margin-top:auto;border:1px solid #3fe0a0;border-radius:12px;padding:28px;background:linear-gradient(135deg,#11161f,#0d1710);">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:12px;">&gt;_ VAMOS CONVERSAR?</div>
+    <div style="font-size:26px;font-weight:700;line-height:1.25;margin-bottom:10px;">Transformo processos manuais de SEO<br>em sistemas que rodam sozinhos.</div>
+    <p style="margin:0 0 18px;font-size:13.5px;line-height:1.6;color:#b6c0cc;max-width:560px;text-wrap:pretty;">Sigo aberta a novas oportunidades em SEO, growth e automação de marketing — sempre buscando o próximo passo antes que ele vire tendência.</p>
+    <div style="display:flex;gap:28px;font-family:'IBM Plex Mono',monospace;font-size:12px;">
+      <div style="color:#e6edf3;"><span style="color:#3fe0a0;">✉</span> jsilverionascimento@gmail.com</div>
+      <a href="https://www.linkedin.com/in/josielsilverio-ai-automation/" style="color:#e6edf3;"><span style="color:#3fe0a0;">in/</span> josielsilverio-ai-automation</a>
+    </div>
+  </div>
+</section>
+</x-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;nomeExibido&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;JOSI&quot;,&quot;JoSEO&quot;],&quot;default&quot;:&quot;JOSI&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Identidade&quot;},&quot;mostrarFoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Identidade&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      nomeExibido: this.props.nomeExibido ?? "JOSI",
+      mostrarFoto: this.props.mostrarFoto ?? true,
+    };
+  }
+}
+</script>
+<script>
+(async () => {
+  if (!document.title || !document.title.trim()) document.title = "Portfolio Josi";
+  // rAF raced with a short timeout: inside a cross-origin iframe (PrintMode),
+  // rAF can be throttled or paused even while the tab is focused, which would
+  // hang the scroll loop and never reach print(). Same pattern as
+  // buildExportSettleScript (export/shared.ts).
+  var raf = function () {
+    return Promise.race([
+      new Promise(function (r) { requestAnimationFrame(r); }),
+      new Promise(function (r) { setTimeout(r, 50); }),
+    ]);
+  };
+  var t0 = performance.now();
+  var mark = function (phase) {
+    var ms = Math.round(performance.now() - t0);
+    console.info('[autoprint]', phase, ms + 'ms');
+    try { parent.postMessage({ __omelette_autoprint: { phase: phase, ms: ms } }, '*'); } catch (e) {}
+  };
+  mark('start');
+  // Prepend so page-supplied @page / break rules (deck-stage's margin:0,
+  // author CSS) keep source-order precedence over the baseline.
+  const baseCss = document.createElement('style');
+  baseCss.textContent = "@media print {\n  figure, table { break-inside: avoid; }\n  *, *::before, *::after {\n    print-color-adjust: exact; -webkit-print-color-adjust: exact;\n    backdrop-filter: none !important; -webkit-backdrop-filter: none !important;\n    animation-delay: -99s !important; animation-duration: .001s !important;\n    animation-iteration-count: 1 !important; animation-fill-mode: both !important;\n    animation-play-state: running !important; transition-duration: 0s !important;\n  }\n}";
+  document.head.prepend(baseCss);
+  if (document.readyState === 'loading') {
+    await new Promise((r) => document.addEventListener('DOMContentLoaded', r, { once: true }));
+  }
+  let ds = document.querySelector('deck-stage');
+  // whenDefined never resolves when nothing registers the element, so only
+  // await it when a <deck-stage> tag exists (and race a timeout regardless).
+  if (ds && !customElements.get('deck-stage')) {
+    try {
+      await Promise.race([
+        customElements.whenDefined('deck-stage'),
+        new Promise((r) => setTimeout(r, 3000)),
+      ]);
+    } catch (e) {}
+    ds = document.querySelector('deck-stage');
+  }
+  // dc-runtime assigns window.DCLogic at init and mounts into #dc-root on
+  // DOMContentLoaded; settle on that subtree so React has rendered before
+  // print(). Non-DC pages fall through to weighing body.
+  const isDc = !ds && 'DCLogic' in window;
+  const settleRoot = ds || (isDc ? document.getElementById('dc-root') : null) || document.body;
+  if (settleRoot) {
+    // Weigh only content children — skip script/style/template so inline
+    // Babel/CSS doesn't register as stable "content" before the framework
+    // has mounted anything.
+    const MEDIA = 'img,svg,canvas,video,picture,iframe,embed,object';
+    const weigh = () => {
+      let text = 0, media = 0;
+      for (const c of settleRoot.children) {
+        const t = c.tagName;
+        if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+        text += (c.textContent || '').trim().length;
+        media += c.querySelectorAll(MEDIA).length + (c.matches(MEDIA) ? 1 : 0);
+      }
+      return text + media * 100;
+    };
+    // "Non-zero and stable" alone is not sufficient to mean rendered: generic
+    // body can carry a static shell while async main content is pending, and
+    // #dc-root can carry the root DC's static text while child refs are still
+    // .sc-placeholder boxes. Gate generic on readyState 'complete', and never
+    // accept stability while a dc-runtime placeholder is present.
+    const isGeneric = settleRoot === document.body;
+    // A placeholder whose fetch failed (.sc-placeholder-error inside) keeps
+    // .sc-placeholder forever — don't wait on it. JS loop, not :has(), so an
+    // engine without :has() support can't throw out of the while and skip
+    // print() entirely.
+    var pendingPlaceholders = function () {
+      var all = settleRoot.querySelectorAll('.sc-placeholder'), n = 0;
+      for (var i = 0; i < all.length; i++)
+        if (!all[i].querySelector('.sc-placeholder-error')) n++;
+      return n;
+    };
+    const deadline = Date.now() + 15000;
+    let last = -1, stable = 0;
+    while (Date.now() < deadline) {
+      const n = weigh();
+      const ready =
+        (!isGeneric || document.readyState === 'complete') &&
+        pendingPlaceholders() === 0;
+      if (n > 0 && n === last && ready) { if (++stable >= 2) break; } else { stable = 0; }
+      last = n;
+      await new Promise((r) => setTimeout(r, 250));
+    }
+  }
+  mark('settle-done' + (settleRoot ? ' (errs=' + settleRoot.querySelectorAll('.sc-placeholder-error').length + ' pending=' + pendingPlaceholders() + ')' : ''));
+  // Project support.js may predate runtime default-seeding; push via bridge.
+  if (isDc && window.__dcSetProps && window.__dcRootName) {
+    try {
+      const dpEl = document.querySelector('script[data-dc-script]');
+      const meta = JSON.parse((dpEl && dpEl.getAttribute('data-props')) || '{}');
+      const bag = {};
+      for (const k in meta)
+        if (k[0] !== '$' && meta[k] && meta[k].default !== undefined)
+          bag[k] = meta[k].default;
+      if (Object.keys(bag).length) {
+        window.__dcSetProps(window.__dcRootName(), bag);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+    } catch (e) {}
+  }
+  // Reveal content gated on scroll or visibility before printing. Lazy <img>,
+  // IntersectionObserver fade-ins, and collapsed <details> don't render while
+  // off-screen, so a long page would print with them blank or closed. Open
+  // every <details>, force native-lazy images eager, and scroll the document
+  // through its full height to trip lazy-load + IO; then wait (bounded) for the
+  // newly-triggered images. Inert for deck-stage (slides aren't scroll-gated).
+  try {
+    for (const d of document.querySelectorAll('details')) d.open = true;
+    for (const img of document.querySelectorAll('img[loading="lazy"]'))
+      img.loading = 'eager';
+    const scroller = document.scrollingElement || document.documentElement;
+    const full = Math.max(scroller.scrollHeight, document.body.scrollHeight);
+    const step = window.innerHeight || 800;
+    var scrollDeadline = Date.now() + 4000;
+    for (let y = 0; y <= full && Date.now() < scrollDeadline; y += step) {
+      window.scrollTo(0, y);
+      await raf();
+    }
+    window.scrollTo(0, 0);
+    await Promise.race([
+      Promise.all(
+        [...document.images].map((img) =>
+          img.complete
+            ? null
+            : new Promise((res) => {
+                img.addEventListener('load', res, { once: true });
+                img.addEventListener('error', res, { once: true });
+              })
+        )
+      ),
+      new Promise((r) => setTimeout(r, 4000)),
+    ]);
+  } catch (e) {}
+  mark('scroll-done');
+  try { await Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 3000))]); } catch (e) {}
+  mark('fonts-done');
+  // Jump every animation to its end state so print() never captures a slide
+  // mid-entrance. Ordering matters: the 0s-transition style must be live
+  // BEFORE data-deck-active is set so attribute-keyed transitions don't
+  // start a (now-0s) run from the pre-active base.
+  const st = document.createElement('style');
+  st.textContent = '*,*::before,*::after{animation-delay:-99s !important;animation-duration:.001s !important;animation-iteration-count:1 !important;animation-fill-mode:both !important;animation-play-state:running !important;transition-duration:0s !important}';
+  document.head.appendChild(st);
+  for (const d of document.querySelectorAll('deck-stage')) {
+    for (const c of d.children) {
+      const t = c.tagName;
+      if (t === 'SCRIPT' || t === 'STYLE' || t === 'TEMPLATE') continue;
+      c.setAttribute('data-deck-active', '');
+    }
+  }
+  // Re-append deck-stage's @page last so no author @page can add a margin and
+  // spill each full-bleed slide onto two sheets. Backstop for old copies.
+  if (ds) {
+    let pg = document.getElementById('deck-stage-print-page');
+    if (!pg) {
+      pg = document.createElement('style');
+      pg.textContent = '@page{size:' + (+ds.getAttribute('width') || 1920) +
+        'px ' + (+ds.getAttribute('height') || 1080) + 'px;margin:0}';
+    }
+    document.body.appendChild(pg);
+  }
+  try {
+    const sweep = () => {
+      for (const a of document.getAnimations()) {
+        try { a.finish(); } catch (e) {
+          try { a.currentTime = (a.effect && a.effect.getComputedTiming().duration) || 0; a.pause(); } catch (e2) {}
+        }
+      }
+    };
+    sweep();
+    await raf();
+    sweep();
+    await raf();
+  } catch (e) {}
+  // A document that owns its print CSS (the doc-page starter injects the
+  // meta at runtime; hand-rolled print designs author it) gets no automatic
+  // page geometry and keeps its forced breaks: strip the injected default
+  // @page — write time cannot see a runtime-injected meta — skip the frame
+  // override below, and skip the fakepage-flattening further down. What
+  // still applies: the print baseline and break-hygiene defaults (no @page
+  // in either; low specificity, so the document's own print CSS wins) and
+  // the break-inside relaxation on >page elements (avoid on those cannot
+  // be honored whoever authored it).
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+  if (ownsPrint) {
+    var dst = document.querySelector('style[data-omelette-print-defaults]');
+    if (dst && dst.textContent) {
+      dst.textContent = dst.textContent.replace(/@page\b[^{}]*\{[^}]*\}/, '');
+    }
+  }
+  // Size the PDF page to the rendered design unless the file opted into
+  // standard paper via @page{size:letter|A4|…} or declared print ownership
+  // via the meta above. Decks own their own @page.
+  // Wrappers (body, …) lose padding+margin so the frame sits at (0,0); the
+  // frame itself loses only margin — its padding is INSIDE the measured
+  // rect and must stay, or content shifts and leaves a gap at bottom/right.
+  var __m = null;
+  try { __m = (() => {
+  var STAMP = true;
+  var docEl = document.documentElement;
+  var doc = { width: docEl.scrollWidth, height: docEl.scrollHeight };
+  // Name-presence check, case-insensitive — the same contract as the
+  // instant-PDF path's runtime check in deck-stage-export.ts. The name is
+  // a string literal here because that file interpolates this script into
+  // its print script, so importing a shared constant from it would be a
+  // cycle; measure.test.ts pins the literal so the two cannot drift apart
+  // silently.
+  var ownsPrint = !!document.querySelector('meta[name="omelette-owns-print" i]');
+
+  var ds = document.querySelector('deck-stage');
+  if (ds) {
+    var dw = Number(ds.getAttribute('width')) || 1920;
+    var dh = Number(ds.getAttribute('height')) || 1080;
+    var n = typeof ds.length === 'number' ? ds.length : ds.children.length;
+    var idx = typeof ds.index === 'number' ? ds.index : 0;
+    var frames = [];
+    for (var i = 0; i < n; i++) frames.push({ left: 0, top: 0, width: dw, height: dh });
+    return { kind: 'deck', source: 'declared', doc: doc, frames: frames,
+      authored: frames.map(function(){return{width:true,height:true}}),
+      deck: { width: dw, height: dh, slideCount: n, index: idx },
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+
+  // Declared kind: a doc-page tag names the kind outright, so no signal
+  // heuristics run (like the deck branch above, signals report false —
+  // they describe inferred classifications only). The tag alone is not
+  // trusted: the element must have upgraded (shadowRoot present), so a
+  // leftover tag whose script was deleted falls through to the heuristics
+  // that handle plain markup.
+  var stageSx = window.scrollX || 0, stageSy = window.scrollY || 0;
+  var dp = document.querySelector('doc-page');
+  if (dp && dp.shadowRoot) {
+    // Crop to the sheet, not the host — the desk around it is screen-only
+    // chrome that must not land in PNG exports.
+    var sheet = dp.shadowRoot.querySelector('.sheet');
+    var sr = (sheet || dp).getBoundingClientRect();
+    return { kind: 'paper-doc', source: 'declared', doc: doc,
+      frames: [{ left: sr.left + stageSx, top: sr.top + stageSy,
+        width: sr.width, height: sr.height }],
+      authored: [{ width: false, height: false }],
+      signals: { paperPage: false, pxPage: false, ownsPrint: ownsPrint } };
+  }
+  var paperPage = false, pxPage = false;
+  var eachRule = function (fn) {
+    for (var s = 0; s < document.styleSheets.length; s++) {
+      var rs; try { rs = document.styleSheets[s].cssRules; } catch (e) { continue; }
+      for (var r = 0; r < rs.length; r++) {
+        fn(rs[r]);
+        if (rs[r].cssRules) for (var n = 0; n < rs[r].cssRules.length; n++) fn(rs[r].cssRules[n]);
+      }
+    }
+  };
+  eachRule(function (r) {
+    if (r.type !== 6) return;
+    var m = /\bsize\s*:\s*([^;}]+)/i.exec(r.cssText || '');
+    if (!m) return;
+    if (/\b(letter|a[3-5]|legal|ledger)\b/i.test(m[1])) paperPage = true;
+    if (/\d+(?:\.\d+)?px\b/i.test(m[1])) pxPage = true;
+  });
+  var signals = { paperPage: paperPage, pxPage: pxPage, ownsPrint: ownsPrint };
+
+  var pxVal = function (v) {
+    var m = /^(\d+(?:\.\d+)?)px$/.exec(v || ''); return m ? +m[1] : 0;
+  };
+  var authoredPx = function (el, prop) {
+    if (pxVal(el.style[prop])) return true;
+    var attr = el.getAttribute(prop);
+    if (attr && /^\d+$/.test(attr)) return true;
+    var hit = false;
+    eachRule(function (r) {
+      if (hit || r.type !== 1 || !r.style) return;
+      try { if (el.matches(r.selectorText) && pxVal(r.style[prop])) hit = true; } catch (e) {}
+    });
+    return hit;
+  };
+
+  var el = document.body, rootPxW = false;
+  for (;;) {
+    var kids = [];
+    for (var c = 0; c < el.children.length; c++) {
+      var t = el.children[c].tagName;
+      if (t !== 'SCRIPT' && t !== 'STYLE' && t !== 'TEMPLATE') kids.push(el.children[c]);
+    }
+    if (kids.length !== 1 || !(kids[0] instanceof HTMLElement)) break;
+    if (STAMP) el.setAttribute('data-om-frame-wrap', '');
+    el = kids[0];
+    rootPxW = authoredPx(el, 'width');
+    if (rootPxW) break;
+  }
+  if (!rootPxW) rootPxW = authoredPx(el, 'width');
+
+  // @page{size:letter} alone is a flowing doc; with a px-width root it's a
+  // fixed sheet pretending to be paper — fall through and size to render.
+  if (paperPage && !rootPxW) {
+    return { kind: 'paper-doc', source: 'inferred', doc: doc, signals: signals,
+      frames: [{ left: 0, top: 0, width: doc.width, height: doc.height }],
+      authored: [{ width: false, height: false }] };
+  }
+
+  var sx = window.scrollX || 0, sy = window.scrollY || 0;
+  var rectOf = function (e) {
+    var r = e.getBoundingClientRect();
+    var oy; try { oy = getComputedStyle(e).overflowY; } catch (err) {}
+    var h = oy === 'visible' ? Math.max(r.height, e.scrollHeight || 0) : r.height;
+    return { left: r.left + sx, top: r.top + sy, width: r.width, height: h };
+  };
+
+  // Multi-frame: off unless the page opts in via data-om-multi-frame on the
+  // stop element — the explicit opt-in is what guards against card grids
+  // and pricing tables that match the geometry but aren't separate
+  // canvases. Two ways to name the frames, explicit first:
+  // 1. Descendants marked data-om-frame-export (the social-frames starter
+  //    marks each asset frame; shells/panels around them are presentation,
+  //    so nesting is expected). Document order.
+  // 2. Fallback, no marked descendants: direct children with an authored px
+  //    width AND height (the original geometry heuristic).
+  // Frames may be different sizes (a gallery mixes 1080×1920 stories with
+  // 728×90 banners); data-om-frame-label rides along for export filenames.
+  if (el.hasAttribute('data-om-multi-frame')) {
+    var visOk = function (e) {
+      var cs; try { cs = getComputedStyle(e); } catch (err) { return false; }
+      return cs.display !== 'none' && cs.visibility !== 'hidden' && cs.position !== 'fixed';
+    };
+    // A frame's crop is its VISUAL box — never the scrollHeight-inflated
+    // rect that rectOf computes for page roots. Shadow-DOM hover controls
+    // (image-slot's Replace bar parks 29px below its host) and similar
+    // escaping UI contribute scrollable overflow to the frame, and the
+    // inflated height both squashes the nominal-size resize and drags
+    // content below the frame into the crop. Zoom-independent; bit every
+    // slot-bearing frame.
+    var frameRectOf = function (e) {
+      var r = e.getBoundingClientRect();
+      return { left: r.left + sx, top: r.top + sy, width: r.width, height: r.height };
+    };
+    var pushCand = function (list, e) {
+      if (!visOk(e)) return;
+      var rc = frameRectOf(e);
+      if (rc.width < 2 || rc.height < 2) return;
+      var lbl = e.getAttribute('data-om-frame-label');
+      if (lbl) rc.label = lbl;
+      list.push(rc);
+    };
+    var cands = [];
+    var marked = el.querySelectorAll('[data-om-frame-export]');
+    if (marked.length) {
+      for (var mk = 0; mk < marked.length; mk++) pushCand(cands, marked[mk]);
+    } else {
+      for (var k = 0; k < el.children.length; k++) {
+        var ch = el.children[k];
+        if (!authoredPx(ch, 'width') || !authoredPx(ch, 'height')) continue;
+        pushCand(cands, ch);
+      }
+    }
+    if (cands.length >= 2) {
+      return { kind: 'multi-frame', source: 'inferred', doc: doc, signals: signals,
+        frames: cands, authored: cands.map(function(){return{width:true,height:true}}) };
+    }
+  }
+
+  if (STAMP) el.setAttribute('data-om-frame', '');
+  return { kind: 'single-canvas', source: 'inferred', doc: doc, signals: signals,
+    frames: [rectOf(el)],
+    authored: [{ width: rootPxW, height: authoredPx(el, 'height') }] };
+})(); } catch (e) {}
+  var frame = null;
+  if (!ownsPrint && __m && __m.kind === 'single-canvas') {
+    var f = __m.frames && __m.frames[0];
+    if (f && f.width >= 200 && f.height >= 200) {
+      frame = f;
+      var fst = document.createElement('style');
+      fst.textContent = '@media print{@page{size:' + Math.ceil(f.width) + 'px ' +
+        Math.ceil(f.height) + 'px;margin:0}' +
+        'html,body,[data-om-frame-wrap]{padding:0!important;margin:0!important;background:none!important}' +
+        '[data-om-frame]{margin:0!important}}';
+      document.body.appendChild(fst);
+    }
+  }
+  // Relax break-inside on oversized elements. An element taller than a
+  // printable page can't honor break-inside: avoid — browsers either overflow
+  // it or push it whole to the next page, leaving a blank gap, then break it
+  // anyway at an arbitrary point. After the final layout (content revealed,
+  // animations jumped), find elements taller than a page that still compute
+  // break-inside: avoid and reset them to auto, so the browser breaks them at
+  // their children's boundaries instead (children keep their own avoid). PAGE_PX
+  // is a conservative portrait estimate at 96 CSS px/in — Letter/A4 usable
+  // height minus our 0.5in margins — so only clearly-oversized elements are
+  // touched and under-page elements still stay whole. Skipped for decks (slides
+  // are sized to the page) and for fixed-size canvases (frame set, or an author
+  // px-based @page) — runs as before for flowing docs on letter/A4.
+  try {
+    if (!ds && !frame && !(__m && __m.signals && __m.signals.pxPage)) {
+      const PAGE_PX = 1024;
+      // Our print defaults add a real @page margin only when the source has
+      // no @page of its own; computed style can't tell us (it reports screen
+      // media), so read the injected rule directly.
+      const defaults = document.querySelector('style[data-omelette-print-defaults]');
+      const pageInset = /@page\s*\{[^}]*margin/.test(defaults ? defaults.textContent || '' : '');
+      const SEL = 'section,article,figure,table,pre,blockquote,[class~="card" i],[class~="page" i],[class~="sheet" i]';
+      for (const el of document.body.querySelectorAll(SEL)) {
+        if (el instanceof HTMLElement && el.offsetHeight > PAGE_PX) {
+          el.setAttribute('data-om-oversized', '');
+          // Fake-paged docs simulate sheets with over-tall break-after:page
+          // boxes; honoring the break spills half-blank pages and ends a
+          // colored box mid-sheet. Flow them, and (only when we own the page
+          // inset) drop the redundant padding/background via the rule below.
+          const cs = getComputedStyle(el);
+          // An owns-print doc's forced breaks are intentional sheet
+          // boundaries, never fake-paged simulation — don't strip them.
+          // The break-inside relaxation above still applies: avoid on a
+          // >page element is impossible to honor whoever authored it.
+          if (
+            !ownsPrint &&
+            (cs.breakAfter === 'page' || cs.pageBreakAfter === 'always')
+          ) {
+            el.setAttribute('data-om-fakepage', '');
+          }
+        }
+      }
+      const ost = document.createElement('style');
+      ost.textContent = '@media print{' +
+        '[data-om-oversized]{break-inside:auto !important;page-break-inside:auto !important}' +
+        '[data-om-fakepage]{break-after:auto !important;page-break-after:auto !important}' +
+        (pageInset ? '[data-om-fakepage]{padding:0 !important;background:none !important}' : '') +
+        '}';
+      document.head.appendChild(ost);
+    }
+  } catch (e) {}
+  // macOS Preview renders Skia-PDF Luminosity soft-masks as opaque grey boxes;
+  // swap the CSS that triggers them for Preview-safe forms.
+  try {
+    for (const el of document.body.querySelectorAll('*')) {
+      const cs = getComputedStyle(el);
+
+      if (cs.boxShadow !== 'none' && cs.filter === 'none') {
+        const outs = [], kept = [];
+        for (const s of cs.boxShadow.split(/,(?![^(]*[)])/)) {
+          const t = s.trim();
+          const m = t.match(/^(rgba?[(][^)]+[)]) (-?[0-9.]+px) (-?[0-9.]+px) ([0-9.]+px) -?[0-9.]+px$/);
+          if (m && parseFloat(m[4]) > 0) outs.push('drop-shadow(' + m[2] + ' ' + m[3] + ' ' + m[4] + ' ' + m[1] + ')');
+          else kept.push(t);
+        }
+        if (outs.length) {
+          el.style.setProperty('filter', outs.join(' '), 'important');
+          el.style.setProperty('box-shadow', kept.join(', ') || 'none', 'important');
+        }
+      }
+
+      const mask = cs.maskImage && cs.maskImage !== 'none' ? cs.maskImage : cs.webkitMaskImage;
+      if (mask && mask !== 'none' && cs.filter === 'none') el.style.setProperty('filter', 'opacity(1)', 'important');
+    }
+  } catch (e) {}
+  mark('print-calling');
+  setTimeout(() => { try { window.print(); } catch (e) {} }, 200);
+})();
+</script>
+</body>
+</html>

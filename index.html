@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html{scroll-behavior:smooth;}
+html,body{margin:0;padding:0;background:#0d1117;}
+a{color:#3fe0a0;text-decoration:none;}
+a:hover{color:#7dedc0;}
+</style>
+</helmet>
+<div style="background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;min-height:100vh;">
+
+<!-- NAV -->
+<nav style="position:sticky;top:0;z-index:10;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #2b3240;">
+  <div style="max-width:1080px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;color:#3fe0a0;">&gt;_ JoSEO</div>
+    <div style="display:flex;gap:26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;">
+      <a href="#projetos" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">projetos</a>
+      <a href="#processo" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">processo</a>
+      <a href="#sobre" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">sobre</a>
+      <a href="#contato" style="color:#0d1117;background:#3fe0a0;padding:6px 14px;border-radius:99px;font-weight:600;" style-hover="background:#7dedc0;color:#0d1117;">contato</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header style="position:relative;overflow:hidden;border-bottom:1px solid #2b3240;">
+  <div style="position:absolute;inset:0;background-image:linear-gradient(#2b324033 1px,transparent 1px),linear-gradient(90deg,#2b324033 1px,transparent 1px);background-size:28px 28px;pointer-events:none;"></div>
+  <div style="position:relative;max-width:1080px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:16px;">SEO TÉCNICO &amp; AUTOMAÇÃO — PORTFÓLIO 2026</div>
+      <h1 style="margin:0;font-size:58px;line-height:1.04;font-weight:700;letter-spacing:-0.02em;">SEO estruturado com <span style="color:#3fe0a0;">automação real.</span></h1>
+      <p style="margin:22px 0 0;font-size:19px;line-height:1.55;color:#b6c0cc;max-width:560px;text-wrap:pretty;">Não só recomendação — sistema que roda sozinho. Construí operações de SEO do zero em iGaming, unindo fundamentos técnicos a fluxos próprios em n8n e APIs de IA.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;">
+        <a href="#projetos" style="background:#3fe0a0;color:#0d1117;font-weight:600;padding:12px 24px;border-radius:8px;font-size:15px;" style-hover="background:#7dedc0;color:#0d1117;">Ver projetos</a>
+        <a href="mailto:jsilverionascimento@gmail.com" style="border:1px solid #2b3240;color:#e6edf3;padding:12px 24px;border-radius:8px;font-size:15px;" style-hover="border-color:#3fe0a0;color:#3fe0a0;">Falar comigo</a>
+      </div>
+    </div>
+    <sc-if value="{{ mostrarFoto }}" hint-placeholder-val="{{ true }}">
+      <div style="width:220px;height:220px;border-radius:50%;padding:5px;background:linear-gradient(135deg,#3fe0a0,#1a7a55);">
+        <img src="uploads/foto-1784226479419.JPG" alt="Foto de Josi" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">
+      </div>
+    </sc-if>
+  </div>
+  <div style="position:relative;border-top:1px solid #2b3240;background:#0a0d13;">
+    <div style="max-width:1080px;margin:0 auto;padding:22px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+      <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">#30 → Top 5</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">SALTO DE POSIÇÃO EM SERP</div></div>
+      <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">~540h</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">ECONOMIZADAS COM AUTOMAÇÃO</div></div>
+      <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">30–40</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">POSTS / MÊS COM CHECKLIST SEO</div></div>
+      <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">80+</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">TERMOS DE GLOSSÁRIO INTERLIGADOS</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- PROJETOS -->
+<main id="projetos" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ PROJETOS</div>
+  <h2 style="margin:0 0 40px;font-size:36px;font-weight:700;letter-spacing:-0.01em;">Casos com problema, sistema<br>e resultado medido.</h2>
+
+  <!-- P01 -->
+  <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;">
+    <div>
+      <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">01 · SEO TÉCNICO</span>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI — iGaming</span>
+      </div>
+      <h3 style="margin:0 0 14px;font-size:24px;font-weight:700;">Operação de SEO construída do zero</h3>
+      <p style="margin:0 0 12px;font-size:14.5px;line-height:1.65;color:#b6c0cc;text-wrap:pretty;">Plano de SEO de 6 meses em nicho de altíssima disputa: auditoria técnica, glossário com 80+ termos interligados por arquitetura de conteúdo e monitoramento contínuo de concorrentes.</p>
+      <p style="margin:0;font-size:14.5px;line-height:1.65;color:#b6c0cc;text-wrap:pretty;"><span style="color:#3fe0a0;font-weight:600;">Diferencial:</span> estrutura que escala sem trabalho manual constante — o conteúdo se sustenta pela interligação, não por esforço repetido.</p>
+    </div>
+    <div style="border:1px solid #2b3240;background:#0d1117;border-radius:10px;padding:22px;align-self:center;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:16px;">POSIÇÃO MÉDIA — GAMES INTERNOS</div>
+      <div style="display:grid;grid-template-columns:60px 1fr 70px;gap:12px;align-items:center;margin-bottom:12px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8b949e;">ANTES</div>
+        <div style="height:20px;background:#1c232e;border-radius:4px;"><div style="width:100%;height:100%;background:#2b3240;border-radius:4px;"></div></div>
+        <div style="font-size:18px;font-weight:700;color:#8b949e;">#30</div>
+      </div>
+      <div style="display:grid;grid-template-columns:60px 1fr 70px;gap:12px;align-items:center;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#3fe0a0;">DEPOIS</div>
+        <div style="height:20px;background:#1c232e;border-radius:4px;"><div style="width:15%;height:100%;background:linear-gradient(90deg,#3fe0a0,#7dedc0);border-radius:4px;"></div></div>
+        <div style="font-size:18px;font-weight:700;color:#3fe0a0;">Top 5</div>
+      </div>
+      <div style="margin-top:14px;font-size:12px;color:#8b949e;line-height:1.5;">Após otimização on-page das páginas de games internos.</div>
+    </div>
+  </article>
+
+  <!-- P02 -->
+  <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;">
+    <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">02 · AUTOMAÇÃO</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI</span>
+    </div>
+    <h3 style="margin:0 0 14px;font-size:24px;font-weight:700;">Conteúdo e monitoramento de SERP rodando sozinhos via n8n</h3>
+    <p style="margin:0 0 22px;font-size:14.5px;line-height:1.65;color:#b6c0cc;max-width:760px;text-wrap:pretty;">Fluxos no n8n integrados a APIs de IA captam mudanças de SERP e concorrência automaticamente e geram conteúdo em escala. Saí do papel de "quem analisa dados" para o de <span style="color:#3fe0a0;font-weight:600;">"quem constrói o sistema que analisa dados"</span>.</p>
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:22px;flex-wrap:wrap;">
+      <div style="border:1px solid #2b3240;border-radius:8px;padding:10px 16px;background:#0d1117;font-size:13px;">Rastreamento de SERP</div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">→</div>
+      <div style="border:1px solid #3fe0a0;border-radius:8px;padding:10px 16px;background:#0d1117;font-size:13px;color:#3fe0a0;font-weight:600;">Fluxo n8n</div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">→</div>
+      <div style="border:1px solid #2b3240;border-radius:8px;padding:10px 16px;background:#0d1117;font-size:13px;">Análise com IA</div>
+      <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">→</div>
+      <div style="border:1px solid #2b3240;border-radius:8px;padding:10px 16px;background:#0d1117;font-size:13px;">Alerta / Relatório</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+      <div style="border:1px solid #2b3240;background:#0d1117;border-radius:10px;padding:18px;">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:14px;">TEMPO / 5 CONTEÚDOS</div>
+        <div style="display:grid;grid-template-columns:90px 1fr 70px;gap:10px;align-items:center;margin-bottom:10px;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;">MANUAL</div>
+          <div style="height:18px;background:#1c232e;border-radius:4px;"><div style="width:100%;height:100%;background:#2b3240;border-radius:4px;"></div></div>
+          <div style="font-size:15px;font-weight:700;color:#8b949e;">9h</div>
+        </div>
+        <div style="display:grid;grid-template-columns:90px 1fr 70px;gap:10px;align-items:center;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;">AUTOMAÇÃO</div>
+          <div style="height:18px;background:#1c232e;border-radius:4px;"><div style="width:6%;height:100%;background:linear-gradient(90deg,#3fe0a0,#7dedc0);border-radius:4px;"></div></div>
+          <div style="font-size:15px;font-weight:700;color:#3fe0a0;">~30min</div>
+        </div>
+      </div>
+      <div style="border:1px solid #2b3240;background:#0d1117;border-radius:10px;padding:18px;display:flex;gap:18px;align-items:center;">
+        <div style="font-size:38px;font-weight:700;color:#3fe0a0;">~540h</div>
+        <div style="font-size:13px;color:#8b949e;line-height:1.55;">economizadas na criação de conteúdo para 300+ jogos do site — tempo devolvido à estratégia.</div>
+      </div>
+    </div>
+  </article>
+
+  <!-- P03 + P04 -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+    <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
+      <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">03 · CMS / CONTEÚDO</span>
+      </div>
+      <h3 style="margin:0 0 14px;font-size:21px;font-weight:700;">Blog WordPress com abastecimento diário</h3>
+      <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:#b6c0cc;text-wrap:pretty;">Gestão diária do blog no WordPress + Elementor: posts, odds e notícias, cada publicação com checklist de SEO on-page — título, meta description e estrutura de headings — mesmo sob prazo editorial apertado.</p>
+      <div style="margin-top:auto;display:flex;gap:24px;">
+        <div><div style="font-size:24px;font-weight:700;color:#3fe0a0;">2 / dia</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;letter-spacing:0.06em;">POSTS PUBLICADOS</div></div>
+        <div><div style="font-size:24px;font-weight:700;color:#3fe0a0;">30–40 / mês</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;letter-spacing:0.06em;">SEM PERDER PADRÃO TÉCNICO</div></div>
+      </div>
+    </article>
+    <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
+      <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">04 · GROWTH / CRO</span>
+      </div>
+      <h3 style="margin:0 0 14px;font-size:21px;font-weight:700;">Landing pages para topo de funil</h3>
+      <p style="margin:0 0 18px;font-size:14px;line-height:1.65;color:#b6c0cc;text-wrap:pretty;">LPs responsivas no Elementor com testes A/B de botões, imagens e títulos. Microsoft Clarity (heatmaps e gravações de sessão) embasando cada hipótese — decisão por dado real de comportamento, não preferência estética.</p>
+      <div style="margin-top:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:10.5px;">
+        <span style="color:#3fe0a0;">HIPÓTESE</span><span style="color:#3fe0a0;">→</span>
+        <span style="color:#d3dae3;">TESTE A/B</span><span style="color:#3fe0a0;">→</span>
+        <span style="color:#d3dae3;">CLARITY</span><span style="color:#3fe0a0;">→</span>
+        <span style="color:#d3dae3;">ITERAÇÃO</span>
+      </div>
+    </article>
+  </div>
+
+  <!-- P05 -->
+  <article style="border:1px solid #2b3240;background:linear-gradient(135deg,#11161f,#0d1710);border-radius:14px;padding:32px;">
+    <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">05 · AI / LLM</span>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">iniciativa própria</span>
+    </div>
+    <h3 style="margin:0 0 14px;font-size:24px;font-weight:700;">llms.txt — SEO para buscadores de IA</h3>
+    <p style="margin:0;font-size:14.5px;line-height:1.65;color:#b6c0cc;max-width:780px;text-wrap:pretty;">ChatGPT, Perplexity e a IA do Google viraram porta de entrada de tráfego — e quase ninguém no setor se preparou. Fui uma das primeiras a implementar o llms.txt na empresa, antecipando um padrão ainda pouco adotado no Brasil. <span style="color:#3fe0a0;font-weight:600;">Iniciativa própria, não pedida por ninguém</span> — é assim que enxergo SEO: um passo à frente de onde a busca está indo.</p>
+  </article>
+</main>
+
+<!-- PROCESSO -->
+<section id="processo" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ PROCESSO</div>
+  <h2 style="margin:0 0 32px;font-size:36px;font-weight:700;letter-spacing:-0.01em;">Como eu trabalho</h2>
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">01</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Diagnóstico</div>
+      <div style="font-size:12.5px;line-height:1.55;color:#8b949e;">Auditoria técnica, GA4/GSC e leitura de concorrência.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">02</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Estratégia</div>
+      <div style="font-size:12.5px;line-height:1.55;color:#8b949e;">Plano de SEO com arquitetura de conteúdo e interlinking.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">03</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Execução</div>
+      <div style="font-size:12.5px;line-height:1.55;color:#8b949e;">On-page, CMS e publicação com checklist de SEO.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">04</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Automação</div>
+      <div style="font-size:12.5px;line-height:1.55;color:#8b949e;">Fluxos n8n + IA substituem o trabalho repetitivo.</div>
+    </div>
+    <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">05</div>
+      <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Monitoramento</div>
+      <div style="font-size:12.5px;line-height:1.55;color:#8b949e;">SERP e concorrência vigiados por sistema, não por planilha.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+  <div style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;">
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ SOBRE</div>
+      <h2 style="margin:0 0 14px;font-size:28px;font-weight:700;">Quem constrói o sistema<br><span style="color:#3fe0a0;">que analisa os dados.</span></h2>
+      <p style="margin:0;font-size:14.5px;line-height:1.7;color:#b6c0cc;text-wrap:pretty;">Tenho experiência construindo operações de SEO do zero e transformando processos manuais em sistemas automatizados — sempre buscando o próximo passo antes que ele vire tendência. Sigo aberta a novas oportunidades em SEO, growth e automação de marketing.</p>
+    </div>
+    <div>
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:12px;">COMPETÊNCIAS CENTRAIS</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">SEO técnico e on-page</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Arquitetura de conteúdo</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Interlinking</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">GA4 / GSC</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Semrush / Ahrefs</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">WordPress / Elementor</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Clarity</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">Testes A/B</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">n8n</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">APIs de IA</span>
+        <span style="border:1px solid #2b3240;border-radius:99px;padding:5px 12px;font-size:12px;color:#d3dae3;">SEO para buscadores de IA</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<footer id="contato" style="max-width:1080px;margin:0 auto;padding:72px 24px 80px;">
+  <div style="border:1px solid #3fe0a0;border-radius:16px;padding:48px;background:linear-gradient(135deg,#11161f,#0d1710);text-align:center;">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:14px;">&gt;_ VAMOS CONVERSAR?</div>
+    <div style="font-size:32px;font-weight:700;line-height:1.25;margin-bottom:12px;">Transformo processos manuais de SEO<br>em sistemas que rodam sozinhos.</div>
+    <p style="margin:0 auto 26px;font-size:14.5px;line-height:1.6;color:#b6c0cc;max-width:520px;text-wrap:pretty;">Aberta a oportunidades CLT e projetos freelance em SEO, growth e automação de marketing.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="mailto:jsilverionascimento@gmail.com" style="background:#3fe0a0;color:#0d1117;font-weight:600;padding:12px 26px;border-radius:8px;font-size:15px;" style-hover="background:#7dedc0;color:#0d1117;">✉ jsilverionascimento@gmail.com</a>
+      <a href="https://www.linkedin.com/in/josielsilverio-ai-automation/" style="border:1px solid #2b3240;color:#e6edf3;padding:12px 26px;border-radius:8px;font-size:15px;" style-hover="border-color:#3fe0a0;color:#3fe0a0;">in/ josielsilverio-ai-automation</a>
+    </div>
+  </div>
+  <div style="margin-top:28px;text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">&gt;_ JoSEO — SEO Técnico &amp; Automação · 2026</div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;mostrarFoto&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Identidade&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { mostrarFoto: this.props.mostrarFoto ?? true };
+  }
+}
+</script>
+</body>
+</html>

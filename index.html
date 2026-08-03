@@ -15,19 +15,42 @@ html{scroll-behavior:smooth;}
 html,body{margin:0;padding:0;background:#0d1117;}
 a{color:#3fe0a0;text-decoration:none;}
 a:hover{color:#7dedc0;}
+*{box-sizing:border-box;}
+h1,h2,h3{overflow-wrap:break-word;}
+@media (max-width:900px){
+  .process-grid{grid-template-columns:repeat(2,1fr)!important;}
+}
+@media (max-width:768px){
+  .nav-inner{padding:12px 16px!important;}
+  .nav-logo{font-size:14px!important;}
+  .nav-links{gap:12px!important;font-size:11px!important;}
+  .nav-cta{padding:5px 10px!important;}
+  .hero-grid{grid-template-columns:1fr!important;gap:32px!important;padding:52px 20px 44px!important;}
+  .hero-photo{justify-self:center;}
+  .stats-grid{grid-template-columns:repeat(2,1fr)!important;gap:20px 16px!important;}
+  .grid-2{grid-template-columns:1fr!important;gap:20px!important;}
+  .card{padding:22px 18px!important;}
+  .section-pad{padding:56px 20px 0!important;}
+  .footer-pad{padding:56px 20px 64px!important;}
+  .contato-card{padding:36px 20px!important;}
+  .br-desktop{display:none;}
+}
+@media (max-width:560px){
+  .process-grid{grid-template-columns:1fr!important;}
+}
 </style>
 </helmet>
 <div style="background:#0d1117;color:#e6edf3;font-family:'Space Grotesk',sans-serif;min-height:100vh;">
 
 <!-- NAV -->
 <nav style="position:sticky;top:0;z-index:10;background:rgba(13,17,23,0.92);backdrop-filter:blur(8px);border-bottom:1px solid #2b3240;">
-  <div style="max-width:1080px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;">
-    <div style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;color:#3fe0a0;">&gt;_ JoSEO</div>
-    <div style="display:flex;gap:26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;">
+  <div class="nav-inner" style="max-width:1080px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+    <div class="nav-logo" style="font-family:'IBM Plex Mono',monospace;font-weight:600;font-size:16px;color:#3fe0a0;">&gt;_ JoSEO</div>
+    <div class="nav-links" style="display:flex;align-items:center;gap:26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;">
       <a href="#projetos" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">projetos</a>
       <a href="#processo" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">processo</a>
       <a href="#sobre" style="color:#b6c0cc;" style-hover="color:#3fe0a0;">sobre</a>
-      <a href="#contato" style="color:#0d1117;background:#3fe0a0;padding:6px 14px;border-radius:99px;font-weight:600;" style-hover="background:#7dedc0;color:#0d1117;">contato</a>
+      <a href="#contato" class="nav-cta" style="color:#0d1117;background:#3fe0a0;padding:6px 14px;border-radius:99px;font-weight:600;" style-hover="background:#7dedc0;color:#0d1117;">contato</a>
     </div>
   </div>
 </nav>
@@ -35,24 +58,24 @@ a:hover{color:#7dedc0;}
 <!-- HERO -->
 <header style="position:relative;overflow:hidden;border-bottom:1px solid #2b3240;">
   <div style="position:absolute;inset:0;background-image:linear-gradient(#2b324033 1px,transparent 1px),linear-gradient(90deg,#2b324033 1px,transparent 1px);background-size:28px 28px;pointer-events:none;"></div>
-  <div style="position:relative;max-width:1080px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;">
+  <div class="hero-grid" style="position:relative;max-width:1080px;margin:0 auto;padding:88px 24px 64px;display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center;">
     <div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:16px;">SEO TÉCNICO &amp; AUTOMAÇÃO — PORTFÓLIO 2026</div>
-      <h1 style="margin:0;font-size:58px;line-height:1.04;font-weight:700;letter-spacing:-0.02em;">SEO estruturado com <span style="color:#3fe0a0;">automação real.</span></h1>
-      <p style="margin:22px 0 0;font-size:19px;line-height:1.55;color:#b6c0cc;max-width:560px;text-wrap:pretty;">Não só recomendação — sistema que roda sozinho. Construí operações de SEO do zero em iGaming, unindo fundamentos técnicos a fluxos próprios em n8n e APIs de IA.</p>
-      <div style="display:flex;gap:14px;margin-top:32px;">
+      <h1 style="margin:0;font-size:clamp(34px,8.5vw,58px);line-height:1.06;font-weight:700;letter-spacing:-0.02em;">SEO estruturado com <span style="color:#3fe0a0;">automação real.</span></h1>
+      <p style="margin:22px 0 0;font-size:clamp(16px,4.3vw,19px);line-height:1.55;color:#b6c0cc;max-width:560px;text-wrap:pretty;">Não só recomendação — sistema que roda sozinho. Construí operações de SEO do zero em iGaming, unindo fundamentos técnicos a fluxos próprios em n8n e APIs de IA.</p>
+      <div style="display:flex;gap:14px;margin-top:32px;flex-wrap:wrap;">
         <a href="#projetos" style="background:#3fe0a0;color:#0d1117;font-weight:600;padding:12px 24px;border-radius:8px;font-size:15px;" style-hover="background:#7dedc0;color:#0d1117;">Ver projetos</a>
         <a href="mailto:jsilverionascimento@gmail.com" style="border:1px solid #2b3240;color:#e6edf3;padding:12px 24px;border-radius:8px;font-size:15px;" style-hover="border-color:#3fe0a0;color:#3fe0a0;">Falar comigo</a>
       </div>
     </div>
     <sc-if value="{{ mostrarFoto }}" hint-placeholder-val="{{ true }}">
-      <div style="width:220px;height:220px;border-radius:50%;padding:5px;background:linear-gradient(135deg,#3fe0a0,#1a7a55);">
+      <div class="hero-photo" style="width:220px;height:220px;border-radius:50%;padding:5px;background:linear-gradient(135deg,#3fe0a0,#1a7a55);">
         <img src="uploads/foto-1784226479419.JPG" alt="Foto de Josi" style="width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;">
       </div>
     </sc-if>
   </div>
   <div style="position:relative;border-top:1px solid #2b3240;background:#0a0d13;">
-    <div style="max-width:1080px;margin:0 auto;padding:22px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
+    <div class="stats-grid" style="max-width:1080px;margin:0 auto;padding:22px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;">
       <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">#30 → Top 5</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">SALTO DE POSIÇÃO EM SERP</div></div>
       <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">~540h</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">ECONOMIZADAS COM AUTOMAÇÃO</div></div>
       <div><div style="font-size:26px;font-weight:700;color:#3fe0a0;">30–40</div><div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#8b949e;margin-top:4px;letter-spacing:0.06em;">POSTS / MÊS COM CHECKLIST SEO</div></div>
@@ -62,12 +85,12 @@ a:hover{color:#7dedc0;}
 </header>
 
 <!-- PROJETOS -->
-<main id="projetos" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+<main id="projetos" class="section-pad" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
   <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ PROJETOS</div>
-  <h2 style="margin:0 0 40px;font-size:36px;font-weight:700;letter-spacing:-0.01em;">Casos com problema, sistema<br>e resultado medido.</h2>
+  <h2 style="margin:0 0 40px;font-size:clamp(27px,6.5vw,36px);font-weight:700;letter-spacing:-0.01em;">Casos com problema, sistema<br class="br-desktop"> e resultado medido.</h2>
 
   <!-- P01 -->
-  <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;">
+  <article class="card grid-2" style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;display:grid;grid-template-columns:1.1fr 1fr;gap:36px;">
     <div>
       <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">01 · SEO TÉCNICO</span>
@@ -94,7 +117,7 @@ a:hover{color:#7dedc0;}
   </article>
 
   <!-- P02 -->
-  <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;">
+  <article class="card" style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;margin-bottom:24px;">
     <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">02 · AUTOMAÇÃO</span>
       <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">Estrelabet / VUPI</span>
@@ -110,7 +133,7 @@ a:hover{color:#7dedc0;}
       <div style="color:#3fe0a0;font-family:'IBM Plex Mono',monospace;">→</div>
       <div style="border:1px solid #2b3240;border-radius:8px;padding:10px 16px;background:#0d1117;font-size:13px;">Alerta / Relatório</div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+    <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
       <div style="border:1px solid #2b3240;background:#0d1117;border-radius:10px;padding:18px;">
         <div style="font-family:'IBM Plex Mono',monospace;font-size:10px;color:#3fe0a0;letter-spacing:0.14em;margin-bottom:14px;">TEMPO / 5 CONTEÚDOS</div>
         <div style="display:grid;grid-template-columns:90px 1fr 70px;gap:10px;align-items:center;margin-bottom:10px;">
@@ -132,8 +155,8 @@ a:hover{color:#7dedc0;}
   </article>
 
   <!-- P03 + P04 -->
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
-    <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
+  <div class="grid-2" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:24px;">
+    <article class="card" style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
       <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">03 · CMS / CONTEÚDO</span>
       </div>
@@ -144,7 +167,7 @@ a:hover{color:#7dedc0;}
         <div><div style="font-size:24px;font-weight:700;color:#3fe0a0;">30–40 / mês</div><div style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;color:#8b949e;letter-spacing:0.06em;">SEM PERDER PADRÃO TÉCNICO</div></div>
       </div>
     </article>
-    <article style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
+    <article class="card" style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:flex;flex-direction:column;">
       <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
         <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">04 · GROWTH / CRO</span>
       </div>
@@ -160,7 +183,7 @@ a:hover{color:#7dedc0;}
   </div>
 
   <!-- P05 -->
-  <article style="border:1px solid #2b3240;background:linear-gradient(135deg,#11161f,#0d1710);border-radius:14px;padding:32px;">
+  <article class="card" style="border:1px solid #2b3240;background:linear-gradient(135deg,#11161f,#0d1710);border-radius:14px;padding:32px;">
     <div style="display:flex;gap:12px;align-items:baseline;margin-bottom:10px;flex-wrap:wrap;">
       <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.14em;">05 · AI / LLM</span>
       <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#8b949e;">iniciativa própria</span>
@@ -171,10 +194,10 @@ a:hover{color:#7dedc0;}
 </main>
 
 <!-- PROCESSO -->
-<section id="processo" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+<section id="processo" class="section-pad" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
   <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ PROCESSO</div>
-  <h2 style="margin:0 0 32px;font-size:36px;font-weight:700;letter-spacing:-0.01em;">Como eu trabalho</h2>
-  <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
+  <h2 style="margin:0 0 32px;font-size:clamp(27px,6.5vw,36px);font-weight:700;letter-spacing:-0.01em;">Como eu trabalho</h2>
+  <div class="process-grid" style="display:grid;grid-template-columns:repeat(5,1fr);gap:14px;">
     <div style="border:1px solid #2b3240;border-top:2px solid #3fe0a0;background:#11161f;border-radius:10px;padding:18px 16px;">
       <div style="font-family:'IBM Plex Mono',monospace;font-size:22px;color:#3fe0a0;margin-bottom:10px;">01</div>
       <div style="font-size:15px;font-weight:600;margin-bottom:8px;">Diagnóstico</div>
@@ -204,11 +227,11 @@ a:hover{color:#7dedc0;}
 </section>
 
 <!-- SOBRE -->
-<section id="sobre" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
-  <div style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;">
+<section id="sobre" class="section-pad" style="max-width:1080px;margin:0 auto;padding:72px 24px 0;">
+  <div class="card grid-2" style="border:1px solid #2b3240;background:#11161f;border-radius:14px;padding:32px;display:grid;grid-template-columns:1.2fr 1fr;gap:36px;">
     <div>
       <div style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:10px;">&gt;_ SOBRE</div>
-      <h2 style="margin:0 0 14px;font-size:28px;font-weight:700;">Quem constrói o sistema<br><span style="color:#3fe0a0;">que analisa os dados.</span></h2>
+      <h2 style="margin:0 0 14px;font-size:clamp(23px,6vw,28px);font-weight:700;">Quem constrói o sistema<br class="br-desktop"> <span style="color:#3fe0a0;">que analisa os dados.</span></h2>
       <p style="margin:0;font-size:14.5px;line-height:1.7;color:#b6c0cc;text-wrap:pretty;">Tenho experiência construindo operações de SEO do zero e transformando processos manuais em sistemas automatizados — sempre buscando o próximo passo antes que ele vire tendência. Sigo aberta a novas oportunidades em SEO, growth e automação de marketing.</p>
     </div>
     <div>
@@ -231,10 +254,10 @@ a:hover{color:#7dedc0;}
 </section>
 
 <!-- CONTATO -->
-<footer id="contato" style="max-width:1080px;margin:0 auto;padding:72px 24px 80px;">
-  <div style="border:1px solid #3fe0a0;border-radius:16px;padding:48px;background:linear-gradient(135deg,#11161f,#0d1710);text-align:center;">
+<footer id="contato" class="footer-pad" style="max-width:1080px;margin:0 auto;padding:72px 24px 80px;">
+  <div class="contato-card" style="border:1px solid #3fe0a0;border-radius:16px;padding:48px;background:linear-gradient(135deg,#11161f,#0d1710);text-align:center;">
     <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#3fe0a0;letter-spacing:0.2em;margin-bottom:14px;">&gt;_ VAMOS CONVERSAR?</div>
-    <div style="font-size:32px;font-weight:700;line-height:1.25;margin-bottom:12px;">Transformo processos manuais de SEO<br>em sistemas que rodam sozinhos.</div>
+    <div style="font-size:clamp(23px,5.8vw,32px);font-weight:700;line-height:1.25;margin-bottom:12px;">Transformo processos manuais de SEO<br class="br-desktop"> em sistemas que rodam sozinhos.</div>
     <p style="margin:0 auto 26px;font-size:14.5px;line-height:1.6;color:#b6c0cc;max-width:520px;text-wrap:pretty;">Aberta a oportunidades CLT e projetos freelance em SEO, growth e automação de marketing.</p>
     <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
       <a href="mailto:jsilverionascimento@gmail.com" style="background:#3fe0a0;color:#0d1117;font-weight:600;padding:12px 26px;border-radius:8px;font-size:15px;" style-hover="background:#7dedc0;color:#0d1117;">✉ jsilverionascimento@gmail.com</a>
